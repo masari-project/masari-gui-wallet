@@ -108,11 +108,13 @@ export class TransactionsExplorer {
 	static isMinerTx(rawTransaction: RawDaemon_Transaction) {
 		if (rawTransaction.vin.length > 0)
 			return false;
-		if(rawTransaction.vout.length === 0){
-			console.error('Weird tx !', rawTransaction);
-			return false;
-		}
-		return parseInt(rawTransaction.vout[0].amount) !== 0;
+                try {
+                    return parseInt(rawTransaction.vout[0].amount) !== 0;
+                }
+                catch(err) {
+                    console.error('Weird tx !', rawTransaction);
+                    return false;
+                }
 	}
 
 	static parse(rawTransaction: RawDaemon_Transaction, wallet: Wallet): Transaction | null {

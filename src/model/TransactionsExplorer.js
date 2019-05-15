@@ -80,11 +80,13 @@ define(["require", "exports", "./Transaction", "./MathUtil", "./Cn"], function (
         TransactionsExplorer.isMinerTx = function (rawTransaction) {
             if (rawTransaction.vin.length > 0)
                 return false;
-            if (rawTransaction.vout.length === 0) {
+            try {
+                return parseInt(rawTransaction.vout[0].amount) !== 0;
+            }
+            catch(err) {
                 console.error('Weird tx !', rawTransaction);
                 return false;
             }
-            return parseInt(rawTransaction.vout[0].amount) !== 0;
         };
         TransactionsExplorer.parse = function (rawTransaction, wallet) {
             var transaction = null;
