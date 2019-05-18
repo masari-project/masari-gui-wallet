@@ -1,7 +1,7 @@
 {
   "website":{
 	"title":"Masari GUI Wallet",
-	"description":"GUI Wallet for Masari cryptocurrency by Masari Core Team"
+	"description":"GUI Wallet for Masari cryptocurrency by the Masari Core Team"
   },
   "messages": {
 	"menu": {
@@ -174,7 +174,7 @@
 	  "subtitle":"Help to fund the development and pay the bills",
 	  "webwalletBlock":{
 		"title":"Webwallet",
-		"content":"This Web wallet is developed by Gnock on his free time.<br/>If you want to help the development, help to pay for the servers, and like this app, please consider a donation: <br/><br/>"
+		"content":"This GUI wallet is developed by the Core team on their free time.<br/>If you want to help the development, help pay for the servers, or just like this app, please consider a donation: <br/><br/>"
 	  },
 	  "masariFundBlock":{
 		"title":"Masari Dev fund",
@@ -403,12 +403,12 @@
 	  "walletKeysModal":{
 		"title":"Private keys",
 		"confirmText":"OK",
-		"content":"Please carefully store these keys. <b>Possessing them means possessing the funds associated</b> !<br/>Spend key: {privSpendKey}<br/>Private view key: {privViewKey}"
+		"content":"Please store these keys carefully. <b>Possessing them means possessing the funds associated</b> !<br/>Spend key: {privSpendKey}<br/>Private view key: {privViewKey}"
 	  },
 	  "mnemonicKeyModal":{
 		"title":"Mnemonic phrase",
 		"confirmText":"OK",
-		"content":"Please store carefully this mnemonic phrase. <b>Possessing it means possessing the funds associated</b> ! The phrase is:<br/>{mnemonic}"
+		"content":"Please store this mnemonic phrase carefully. <b>Possessing it means possessing the funds associated</b> ! The phrase is:<br/>{mnemonic}"
 	  },
 	  "mnemonicLangSelectionModal":{
 		"title":"In which language do you want your mnemonic phrase?",
