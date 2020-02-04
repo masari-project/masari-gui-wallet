@@ -1,55 +1,33 @@
 {
   "name": "masari-gui-wallet",
   "productName": "masari-gui-wallet",
-  "version": "1.0.0",
-  "description": "GUI Wallet for Masari currency by Masari Core Team",
+  "version": "2.0.0",
+  "description": "GUI Wallet for Masari by the Masari Team",
   "main": "src/main.js",
   "scripts": {
+    "install": "bash ./scripts/installer.sh",
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configurede\""
   },
   "keywords": [],
-  "author": "Masari Core Team (cryptochangements)",
+  "author": "The Masari Project",
   "license": "BSD-3-Clause",
   "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "masari-gui-wallet"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
+    "forge": "./forge.config.js"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.33",
-    "@electron-forge/maker-deb": "^6.0.0-beta.33",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.33",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.33",
-    "@electron-forge/maker-zip": "^6.0.0-beta.33",
-    "electron": "5.0.1"
+    "@electron-forge/cli": "^6.0.0-beta.45",
+    "@electron-forge/maker-deb": "^6.0.0-beta.45",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.45",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.45",
+    "@electron-forge/maker-zip": "^6.0.0-beta.45",
+    "electron": "6.0.12"
   }
 }
